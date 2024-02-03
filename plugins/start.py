@@ -11,16 +11,16 @@ from helper.database import  insert ,find_one,used_limit,usertype,uploadlimit,ad
 from pyrogram.file_id import FileId
 from helper.database import daily as daily_
 from helper.date import add_date ,check_expi
-CHANNEL = os.environ.get('CHANNEL',"")
+CHANNEL = os.environ.get('CHANNEL',"-1002044312409")
 import datetime
 from datetime import date as date_
-STRING = os.environ.get("STRING","")
-log_channel = int(os.environ.get("LOG_CHANNEL",""))
-token = os.environ.get('TOKEN','')
+STRING = os.environ.get("STRING","Hello 🤗")
+log_channel = int(os.environ.get("LOG_CHANNEL","-1002121321120"))
+token = os.environ.get('TOKEN','6475149749:AAEQt9M91pjiNCBF_lkxgVEXdq77S1lT_n0')
 botid = token.split(':')[0]
 
-DB_NAME = os.environ.get("DB_NAME","")
-DB_URL = os.environ.get("DB_URL","")
+DB_NAME = os.environ.get("DB_NAME","Yogesh")
+DB_URL = os.environ.get("DB_URL","mongodb+srv://karthickjk:karthick@cluster0.vcjskkq.mongodb.net/?retryWrites=true&w=majority")
 mongo = pymongo.MongoClient(DB_URL)
 db = mongo[DB_NAME]
 dbcol = db["promo"]
@@ -59,13 +59,13 @@ async def start(client,message):
 	**Document Or Video** and enter new filename to rename it__
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
+	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/moviemaster_yogi") ], 
+
 	    return
 	if id:
 	        if id == procode:
 	            await message.reply_text("You Can Use Now ")
-	            uploadlimit(int(user_id),10737418240)
+	            uploadlimit(int(user_id),5324568283)
 	            usertype(int(user_id),"NORMAL")
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
 async def send_doc(client,message):
@@ -78,7 +78,7 @@ async def send_doc(client,message):
        		await message.reply_text("**__You are not subscribed my channel__** ",
        		reply_to_message_id = message.id,
        		reply_markup = InlineKeyboardMarkup(
-       		[ [ InlineKeyboardButton("Support 🇮🇳" ,url=f"https://t.me/{update_channel}") ]   ]))
+       		[ [ InlineKeyboardButton("Support 🇮🇳" ,url=f"https://t.me/Moviemaster_Yogi") ]   ]))
        		return
        try:
            bot_data = find_one(int(botid))
@@ -101,7 +101,7 @@ async def send_doc(client,message):
        
        if user_type=="Free":
            LIMIT = 600
-           await message.reply_text(f"Complete The Task and get Free subscription per day . Watch full video https://lntechnical.works/{message.from_user.id} ")
+           await message.reply_text(f"Complete The Task and get Free subscription per day . {message.from_user.id} ")
            return
        elif user_type=="NORMAL":
            LIMIT = 250
