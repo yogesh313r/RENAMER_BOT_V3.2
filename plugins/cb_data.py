@@ -14,13 +14,13 @@ from helper.ffmpeg import take_screen_shot,fix_thumb
 from helper.progress import humanbytes
 from helper.set import escape_invalid_curly_brackets
 
-log_channel = int(os.environ.get("LOG_CHANNEL", ""))
+log_channel = int(os.environ.get("LOG_CHANNEL", "-1002121321120"))
 
-API_ID = int(os.environ.get("API_ID", ""))
+API_ID = int(os.environ.get("API_ID", "25393663"))
 
-API_HASH = os.environ.get("API_HASH", "")
+API_HASH = os.environ.get("API_HASH", "46fb840e6cb4b84d582c44ebbf703251")
 
-STRING = os.environ.get("STRING", "")
+STRING = os.environ.get("STRING", "Hello {first} 🥇")
 
 app = Client("test", api_id=API_ID, api_hash=API_HASH, session_string=STRING)
 
