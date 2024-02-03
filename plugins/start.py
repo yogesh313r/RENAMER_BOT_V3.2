@@ -14,7 +14,7 @@ from helper.date import add_date ,check_expi
 CHANNEL = os.environ.get('CHANNEL',"-1002044312409")
 import datetime
 from datetime import date as date_
-STRING = os.environ.get("STRING","Hello 🤗")
+STRING = os.environ.get("STRING","Hello")
 log_channel = int(os.environ.get("LOG_CHANNEL","-1002121321120"))
 token = os.environ.get('TOKEN','6475149749:AAEQt9M91pjiNCBF_lkxgVEXdq77S1lT_n0')
 botid = token.split(':')[0]
